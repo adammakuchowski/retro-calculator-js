@@ -9,7 +9,7 @@ Calculator project using HTML CSS and JS technology. The Calculator has all the 
 # Screenshots
 
 ## Look design
-![retro-calculator](https://user-images.githubusercontent.com/94242778/174437662-44f06edc-1a53-4dac-88fa-2e8d09bc7f23.PNG)
+![image](https://user-images.githubusercontent.com/94242778/174437704-a271766d-eea7-4dc9-a9e2-051f4f7dc5e0.png)
 
 ## Calculations
 ## Calculation history

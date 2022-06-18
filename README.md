@@ -14,6 +14,6 @@ Calculator project using HTML CSS and JS technology. The Calculator has all the 
 ## Calculations
 ## Calculation history
 
-##TODO \
+## TODO
 
 The Calculator behavior logic implemented in javascript.

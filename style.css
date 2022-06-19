@@ -43,13 +43,13 @@ body {
     -webkit-box-shadow:inset 0px 0px 0px 1px white;
 }
 
-.previous-result {
+.previous-number {
     font-size: 18px;
     color: white;
     padding: 5px;
 }
 
-.current-result {
+.current-number {
     font-size: 25px;
     color: white;
     padding: 5px;
@@ -104,7 +104,7 @@ body {
     padding-bottom: 10px;
 }
 
-.clear-history-btn {
+.clear-history-button {
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;

@@ -4,7 +4,7 @@ Calculator project with all basic maths functionalities in retro style colors.
 
 ## Project description 
 
-Calculator project using HTML CSS and JS. The Calculator has all the basic mathematical functions and the history of calculations. Simple project to learn how to use HTML, CSS and javaScript
+Calculator project using HTML CSS and JS. The Calculator has all the basic mathematical functions and the history of calculations. Simple project to learn how to use HTML, CSS and javascript
 
 # Screenshots
 

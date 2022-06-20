@@ -6,7 +6,6 @@ const mathOperator = document.querySelector('.math-operator')
 
 const numbersButtons = document.querySelectorAll('.number')
 
-numbersButtons.forEach(btn => console.log(btn))
 const operatorsButtons = document.querySelectorAll('.operator')
 const equalsButton = document.querySelector('.equals')
 
@@ -18,26 +17,59 @@ const historyButton = document.querySelector('.clear-history-button')
 
 let result = ''
 
-function displayNumbers () {
-    if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
-    if(this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.'
+function displayNumbers() {
+    if (this.textContent === '.' && currentNumber.innerHTML.includes('.')) return
+    if (this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.'
 
     currentNumber.innerHTML += this.textContent;
 }
 
-function operator () {
-    
-} 
+function operator() {
+    if (currentNumber.innerHTML === '' && this.textContent === '-') return currentNumber.innerHTML = '-'
+    else if (currentNumber.innerHTML === '') return
 
-function calculate () {
+    if (mathOperator.innerHTML !== '') {
+        calculate()
+    }
+    previousNumber.innerHTML = currentNumber.innerHTML
+    mathOperator.innerHTML = this.textContent
+    currentNumber.innerHTML = ''
+}
+
+function calculate() {
+    if (previousNumber.innerHTML === '' || currentNumber.innerHTML === '') return
+
+    let previousNum = Number(previousNumber.innerHTML)
+    let currentNum = Number(currentNumber.innerHTML)
+
+    switch (mathOperator.innerHTML) {
+        case '+':
+            result = previousNum + currentNum
+            break
+        case '-':
+            result = previousNum - currentNum
+            break
+        case '*':
+            result = previousNum * currentNum
+            break
+        case ':':
+            result = previousNum / currentNum
+            break
+        case '2^':
+            result = previousNum ** currentNum
+            break
+    }
+
+    currentNumber.innerHTML = result
+    previousNumber.innerHTML = ''
+    mathOperator.innerHTML = ''
+}
+
+function clearDisplay() {
 
 }
 
-function clearDisplay () {
-
-}
-
-function clearHistory () {
+function clearHistory() {
 
 }
 

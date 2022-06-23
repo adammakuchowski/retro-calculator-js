@@ -9,13 +9,15 @@ const numbersButtons = document.querySelectorAll('.number')
 const operatorsButtons = document.querySelectorAll('.operator')
 const equalsButton = document.querySelector('.equals')
 
-const cleatButton = document.querySelector('.clear')
+const clearButton = document.querySelector('.clear')
 
 const caclulaotrHisotry = document.querySelector('.display-calculation-history')
 const historyButton = document.querySelector('.clear-history-button')
 
 
 let result = ''
+
+let history = []
 
 function displayNumbers() {
     if (this.textContent === '.' && currentNumber.innerHTML.includes('.')) return
@@ -61,20 +63,38 @@ function calculate() {
     }
 
     currentNumber.innerHTML = result
+    history.push(previousNum, mathOperator.innerHTML, currentNum, result)
     previousNumber.innerHTML = ''
     mathOperator.innerHTML = ''
 }
 
 function clearDisplay() {
+    if (history.length === 4) {
+        addtoHistory()
+    }
+    currentNumber.innerHTML = ''
+    previousNumber.innerHTML = ''
+    mathOperator.innerHTML = ''
+    history = []
+}
+
+function addtoHistory() {
+    historyButton.classList.add('active')
+    const valueToHistory = document.createElement('li')
+    valueToHistory.innerHTML = `${history[0]} ${history[1]} ${history[2]}= ${history[3]}`
+    valueToHistory.classList.add('value-to-history')
+    caclulaotrHisotry.appendChild(valueToHistory)
 
 }
 
 function clearHistory() {
+    caclulaotrHisotry.textContent = ''
+    historyButton.classList.remove('active')
 
 }
 
 numbersButtons.forEach((button) => button.addEventListener('click', displayNumbers))
 operatorsButtons.forEach((button) => button.addEventListener('click', operator))
 equalsButton.addEventListener('click', calculate)
-cleatButton.addEventListener('click', clearDisplay)
+clearButton.addEventListener('click', clearDisplay)
 historyButton.addEventListener('click', clearHistory)

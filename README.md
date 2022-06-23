@@ -15,4 +15,4 @@ Calculator project using HTML CSS and JS. The Calculator has all the basic mathe
 ![retro-calculator-2](https://user-images.githubusercontent.com/94242778/175385782-c309b4e7-1cc8-4b90-b63b-9d9ce6b70428.PNG)
 
 ## Calculation history
-![retro-calculator-3](https://user-images.githubusercontent.com/94242778/175385831-433b0b1f-d2fa-461d-8a29-4f3e7d2f52a8.PNG)
+![retro-calculator-3](https://user-images.githubusercontent.com/94242778/175387558-fb836a95-a1ec-4b8a-8e01-15afe5c348c1.PNG)

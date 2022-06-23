@@ -29,7 +29,7 @@ body {
 }
 
 .display-calculator {
-    width: 100%;
+    width: 99.5%;
     min-height: 20%;
     max-height: min-content;
     background-color: black;
@@ -40,7 +40,7 @@ body {
     justify-content: space-between;
     font-weight: bold;
     margin-bottom: 1px;
-    -webkit-box-shadow:inset 0px 0px 0px 1px white;
+    border: 1px solid white;
 }
 
 .previous-number {
@@ -69,7 +69,7 @@ body {
 
 .keyboard button {
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: black;
     color: white;
     cursor: pointer;
     border: none;
@@ -90,11 +90,13 @@ body {
 
 .calculation-history {
     height: 60vh;
-    margin: 10px;
-    width: 150px;
+    margin-top: 2px;
+    min-width: 150px;
+    max-width: 150px;
     background-color: black;
+    margin-left: 5px;
     color: white;
-    -webkit-box-shadow:inset 0px 0px 0px 1px white;
+    border: 1px solid white;
     text-align: center;
 }
 
@@ -106,7 +108,7 @@ body {
 
 .clear-history-button {
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: black;
     color: white;
     cursor: pointer;
     border: none;
@@ -119,13 +121,13 @@ body {
     outline: none;
 }
 
-.clear-history-btn.active {
+.clear-history-button.active {
     display: block;
     margin: 5px auto;
 }
 
 
-.clear-history-btn:hover {
+.clear-history-button:hover {
     background-color: white;
     color: black;
 }
@@ -144,4 +146,11 @@ body {
 
 .project-author {
     text-align: right;
+}
+
+.value-to-history {
+    margin: 8px 0px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
 }

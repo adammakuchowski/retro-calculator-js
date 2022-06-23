@@ -69,7 +69,7 @@ function calculate() {
 }
 
 function clearDisplay() {
-    if (history.length === 4) {
+    if (history.length > 3) {
         addtoHistory()
     }
     currentNumber.innerHTML = ''
@@ -81,7 +81,9 @@ function clearDisplay() {
 function addtoHistory() {
     historyButton.classList.add('active')
     const valueToHistory = document.createElement('li')
-    valueToHistory.innerHTML = `${history[0]} ${history[1]} ${history[2]}= ${history[3]}`
+    let prepareValueToHistory = history.reverse()
+    valueToHistory.innerHTML = `${prepareValueToHistory[3]} ${prepareValueToHistory[2]} ${prepareValueToHistory[1]} = ${prepareValueToHistory[0]}`
+    prepareValueToHistory = null
     valueToHistory.classList.add('value-to-history')
     caclulaotrHisotry.appendChild(valueToHistory)
 

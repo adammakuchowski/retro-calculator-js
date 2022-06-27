@@ -1,6 +1,6 @@
 # About the retro-calculator-js project
 
-Calculator project with all basic maths functionalities in retro style colors.
+Calculator project with all basic maths functionalities in retro style colors
 
 ## Project description 
 
